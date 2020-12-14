@@ -35,3 +35,4 @@ console.log(nicoInfo.isHansome)
 console.log('Hello')
 console.log(console)
 console.log(nicoInfo,console)
+
