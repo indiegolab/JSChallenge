@@ -7,8 +7,6 @@
 
 const title = document.getElementById("title");
 // const title = document.getElementsByClassName("title");
-
-
 console.log(title)
 console.dir(title)
 console.log("hihi");
@@ -20,6 +18,5 @@ document.title= "JS Challenge"
 
 
 // querySelector를 사용하면 elements를 #ID를 통해 쉽게 가져올 수 있음
-
 const querySelector = document.querySelector("#title");
 querySelector.innerHTML= " HI YOU";
