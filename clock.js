@@ -1,5 +1,24 @@
 /* 본격 Momenum 만들기 시작 */
 
 // 시계 만들기
-function init(){}
+const clockContainer = document.querySelector(".js-clock"),
+    clockTitle = clockContainer.querySelector("h1");
 
+function getTime() {
+    const date = new Date();
+    const minutes = date.getMinutes();
+    const hours = date.getHours();
+    const seconds = date.getSeconds();
+    // 10초보다 아래면 앞에 0을 붙여주는 미니if 넣기
+    clockTitle.innerText = `${
+        hours < 10 ? `0${hours}` : hours}:${
+            minutes < 10 ? `0${minutes}`: minutes}:${
+        seconds < 10 ? `0${seconds}` : seconds}`;
+}
+
+function init(){
+    getTime();
+    setInterval(getTime, 1000);
+}
+
+init();
